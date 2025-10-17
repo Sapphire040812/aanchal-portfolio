@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Satisfy&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --charcoal: #0a0a0a;
+    --white: #ffffff;
+    --soft-blue: #e5e4e7;
+    --glow-blue: #b0d0e8;
+    --border-blue: #5a8ca0;
+    --dark-section: rgba(20, 20, 30, 0.6);
+    --dark-project: rgba(20, 20, 30, 0.5);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    background: url('bck.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--white); 
+    padding: 80px 40px 40px;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.nav-left {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--glow-blue);
+}
+
+.nav-right a {
+    color: var(--soft-blue);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-right a:hover {
+    color: var(--glow-blue);
+    text-shadow: 0 0 8px var(--glow-blue);
+}
+
+/* Header - Modified for horizontal layout */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #e4eaf6;
+    border-bottom: 2px solid var(--border-blue);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(155, 126, 181, 0.5);
+}
+
+/* Title Card */
+.title-card {
+    display: inline-block; 
+    padding: 10px 20px;
+    margin: 12px auto 20px;
+    
+    background-color: rgba(15, 15, 25, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    border: 1px solid rgba(176, 208, 232, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header .title-role {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0; 
+    padding: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* NEW: Container for all three contact cards in one row */
+.contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+/* Contact info cards - Modified for horizontal layout */
+.contact-row p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    margin: 0;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: rgba(15, 15, 25, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(176, 208, 232, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Links - Bright cyan for visibility */
+header a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #6dd5ff;
+    text-decoration: none;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+header a:hover {
+    color: var(--white);
+    background-color: rgba(176, 208, 232, 0.3);
+    text-shadow: 0 0 15px var(--glow-blue), 2px 2px 8px rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
+}
+
+header .fas, header .fab {
+    margin-right: 8px;
+    color: var(--glow-blue);
+    filter: drop-shadow(0 0 5px rgba(176, 208, 232, 0.8));
+}
+
+/* Sections */
+section {
+    margin-bottom: 50px;
+    padding: 25px 30px;
+    background-color: var(--dark-section); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-left: 4px solid var(--border-blue);
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(163, 196, 220, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(163, 196, 220, 0.5);
+}
+
+h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--glow-blue);
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--glow-blue);
+}
+
+/* Lists */
+ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: var(--soft-blue);
+    font-weight: 400;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+li::before {
+    content: '•'; 
+    color: var(--glow-blue);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+}
+
+/* Project Section */
+section#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--dark-project);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--border-blue);
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 0 10px rgba(163, 196, 220, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(163, 196, 220, 0.4);
+}
+
+.project-card h3 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--glow-blue);
+    margin-bottom: 10px;
+}
+
+.project-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.project-card li {
+    font-size: 1em;
+    color: var(--soft-blue);
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.project-links {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-links a {
+    color: var(--glow-blue);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.project-links a:hover {
+    color: var(--white);
+}
+
+.project-links .fas, .project-links .fab {
+    margin-right: 5px;
+}
+
+/* Contact Section Links - Enhanced visibility */
+.contact-links a {
+    color: #6dd5ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    background-color: rgba(10, 10, 10, 0.6);
+    border: 1px solid var(--glow-blue);
+    border-radius: 6px;
+    display: inline-block;
+    margin: 10px 5px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: var(--white);
+    background-color: rgba(176, 208, 232, 0.3);
+    text-shadow: 0 0 15px var(--glow-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(176, 208, 232, 0.5);
+}
+
+/* Footer - Enhanced visibility */
+footer {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 60px;
+    color: var(--white);
+    font-weight: 600;
+    font-family: 'Patrick Hand', cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.7);
+    background-color: rgba(10, 10, 10, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-blue);
+    box-shadow: 0 0 15px rgba(176, 208, 232, 0.3);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 100px 15px 15px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+    
+    .title-card {
+        padding: 8px 18px;
+    }
+
+    header .title-role {
+        font-size: 1.3em;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-row p {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-left {
+        margin-bottom: 10px;
+    }
+
+    .nav-right a {
+        margin: 0 8px;
+        font-size: 0.85em;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 0.95em;
+        padding: 12px;
+    }
+}
